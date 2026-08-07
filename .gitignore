@@ -1,0 +1,13 @@
+# 编辑器与系统文件
+.vscode/
+.DS_Store
+Thumbs.db
+
+# 临时文件
+*.log
+*.tmp
+
+# 依赖与构建产物（如后续扩展时使用）
+node_modules/
+dist/
+build/
