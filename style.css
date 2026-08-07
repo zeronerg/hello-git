@@ -1,0 +1,134 @@
+:root {
+  --bg: #07111f;
+  --panel: rgba(255, 255, 255, 0.08);
+  --text: #f5f7ff;
+  --accent: #76d7ff;
+  --accent-2: #ff8f5d;
+  --border: rgba(255, 255, 255, 0.15);
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Microsoft YaHei", Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(135deg, var(--bg), #14233f 55%, #1f2a44);
+  min-height: 100vh;
+  line-height: 1.7;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: rgba(7, 17, 31, 0.8);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.navbar .brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  background: rgba(118, 215, 255, 0.16);
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 18px 35px rgba(0,0,0,0.25);
+  overflow: hidden;
+}
+
+.hero {
+  padding: 48px 40px;
+  background: radial-gradient(circle at top left, rgba(118,215,255,0.28), transparent 35%);
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+  font-size: 2.2rem;
+  color: var(--accent);
+}
+
+.hero p {
+  margin: 0;
+  max-width: 760px;
+  font-size: 1.05rem;
+}
+
+.content {
+  padding: 24px 40px 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.grid article {
+  padding: 18px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+}
+
+.grid h2,
+.grid h3 {
+  margin-top: 0;
+  color: var(--accent-2);
+}
+
+ul { padding-left: 18px; }
+
+.quote {
+  margin-top: 24px;
+  padding: 18px 20px;
+  border-left: 4px solid var(--accent);
+  background: rgba(118,215,255,0.12);
+  border-radius: 10px;
+  font-style: italic;
+}
+
+.footer {
+  padding: 18px 20px 30px;
+  text-align: center;
+  color: rgba(245,247,255,0.75);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 700px) {
+  .navbar { flex-direction: column; gap: 10px; }
+  .hero, .content { padding-left: 20px; padding-right: 20px; }
+  .hero h1 { font-size: 1.7rem; }
+}
