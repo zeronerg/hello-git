@@ -1,11 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello, World!</title>
+    <title>鸣潮｜风暴与回响</title>
+    <style>
+        :root {
+            --bg: #07111f;
+            --panel: rgba(255, 255, 255, 0.08);
+            --text: #f5f7ff;
+            --accent: #76d7ff;
+            --accent-2: #ff8f5d;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            background: linear-gradient(135deg, var(--bg), #14233f 55%, #1f2a44);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 24px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--panel);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .hero {
+            padding: 48px 40px 32px;
+            background: radial-gradient(circle at top left, rgba(118,215,255,0.3), transparent 35%);
+        }
+
+        .hero h1 {
+            margin: 0 0 12px;
+            font-size: 2.2rem;
+            color: var(--accent);
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            max-width: 720px;
+            margin: 0;
+        }
+
+        .content {
+            padding: 0 40px 40px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 16px;
+            padding: 18px;
+        }
+
+        .card h2 {
+            font-size: 1.1rem;
+            margin-top: 0;
+            color: var(--accent-2);
+        }
+
+        .card ul {
+            padding-left: 18px;
+            line-height: 1.7;
+        }
+
+        .quote {
+            margin-top: 24px;
+            padding: 18px 20px;
+            border-left: 4px solid var(--accent);
+            background: rgba(118,215,255,0.12);
+            border-radius: 10px;
+            font-style: italic;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
+    <div class="container">
+        <section class="hero">
+            <h1>鸣潮：在风暴中寻找回响</h1>
+            <p>
+                《鸣潮》是一款以高自由度战斗与充满异域风格的世界观闻名的动作角色扮演游戏。
+                这里有炽烈的战斗、充满悬疑的剧情，以及让人记忆深刻的角色与音乐氛围。
+            </p>
+        </section>
+
+        <section class="content">
+            <div class="card-grid">
+                <article class="card">
+                    <h2>游戏特色</h2>
+                    <ul>
+                        <li>爽快的连招与技能表现</li>
+                        <li>多样化的角色玩法</li>
+                        <li>丰富的剧情与世界观设定</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h2>角色印象</h2>
+                    <ul>
+                        <li>Rover：勇敢向前的冒险者</li>
+                        <li>Jinhsi：冷静而有力量的角色</li>
+                        <li>Yangyang：轻快又有辨识度的风格</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h2>玩家体验</h2>
+                    <ul>
+                        <li>战斗节奏紧凑且富有反馈</li>
+                        <li>角色与剧情都很有辨识度</li>
+                        <li>音乐与视觉氛围令人沉浸</li>
+                    </ul>
+                </article>
+            </div>
+
+            <div class="quote">
+                “每一次冲击都是一次回响，每一次回响都在向你诉说风暴的秘密。”
+            </div>
+        </section>
+    </div>
 </body>
 </html>
